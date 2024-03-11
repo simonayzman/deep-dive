@@ -18,17 +18,21 @@ First, you see a "Tinder" like experience, except instead of swiping on people, 
 
 Once you're finished swiping, you enter the "digital room." You'll see a list of all the people at the party, ordered by how closely they match with you over your preferred questions and topics of conversation! Moreover, this list updates in real time, meaning that as new people join the party, you might find an even better top-ranked match later into the night. You can click into a person's profile from the list, and see specifically what you two can bond over.
 
-What happens next is up to you! You choose who to talk to and what to talk to about. Happy friendshipping! [Watch the demo here](./demo.mp4).
+What happens next is up to you! You choose who to talk to and what to talk to about. Happy friendshipping!
+
+## Demo Video
+
+[Watch a full demo of the experience here!](./demo.mp4)
 
 ## Technologies Used
 
 The front-end is built with [React](https://reactjs.org/) and connects to a [Flask](https://flask.palletsprojects.com/en/1.1.x/) (Python-based) back-end hosted on [Heroku](https://www.heroku.com/). Data is stored in a [Firebase](https://firebase.google.com/) real-time database, specifically [Firestore](https://firebase.google.com/docs/firestore). The real-time connection is maintained via [Socket.IO](https://socket.io/).
 
-## Try it out!
+## Development Quick Start
 
-Go to http://deep-dive-072193.herokuapp.com/, and join room `AAAAAA`! This will take you through the entire flow of the application as a user. If you're hosting an event yourself, try creating a room and sharing its code with your guests!
+Unfortunately, it's not possible to run the app locally without a connection to a live Firebase database; the server will not function properly without it. The necessary keys/credentials are provided via a hidden, non-committed file `server/keys.json` for local runtimes and provided as environment variables in the production instance on Heroku. The website used to be hosted at http://deep-dive-072193.herokuapp.com/, but is no longer.
 
-Unfortunately, it's not possible to run the app locally without a connection to a live Firebase database; the server will not function properly without it. The necessary keys/credentials are provided via a hidden, non-committed file `server/keys.json` for local runtimes and provided as environment variables in the production instance on Heroku. However, assuming all of the credentials exist, a normal development flow looks like:
+However, assuming all of the credentials exist, a normal development flow looks like:
 
 ```
 pipenv shell    # Activate python virtual environment and install pip dependencies
@@ -56,6 +60,8 @@ To run tests:
 # Run at top-level directory
 ./test.sh
 ```
+
+You could join room `AAAAAA` to go through the entire flow of the application as a user. If you're hosting an event yourself, try creating a room and sharing its code with your guests!
 
 ## Project Structure
 
